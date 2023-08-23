@@ -1,8 +1,5 @@
 package com.zensar;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @SpringBootApplication
 public class ApiCallApplication {
 
-	public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(ApiCallApplication.class, args);
         openBrowser();
 	}
