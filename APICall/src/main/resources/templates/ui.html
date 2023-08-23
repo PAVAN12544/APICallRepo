@@ -2,16 +2,33 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Dropdown UI</title>
+    <style>
+        .heading-dropdown {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Script Name:</h2>
-    <select>
-        <option th:each="option : ${staticDropdownValues}" th:value="${option}" th:text="${option}"></option>
-    </select>
-
-    <h2>Device:</h2>
-    <select>
-        <option th:each="option : ${dynamicDropdownValues}" th:value="${option}" th:text="${option}"></option>
-    </select>
+    <div class="heading-dropdown">
+        <h2>Script Name:</h2>
+        <div class="dropdown">
+            <select>
+                <option th:each="option : ${staticDropdownValues}" th:value="${option}" th:text="${option}"></option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="heading-dropdown">
+        <h2>Device:</h2>
+        <div class="dropdown">
+            <select>
+                <option th:each="option : ${dynamicDropdownValues}" th:value="${option}" th:text="${option}"></option>
+            </select>
+        </div>
+    </div>
 </body>
 </html>

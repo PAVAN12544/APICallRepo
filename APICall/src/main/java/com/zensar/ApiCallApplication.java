@@ -20,7 +20,7 @@ public class ApiCallApplication {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://localhost:5678/tor");
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		driver.quit();
 	}
 }
