@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dropdown UI</title>
+</head>
+<body>
+    <h2>Script Name:</h2>
+    <select>
+        <option th:each="option : ${staticDropdownValues}" th:value="${option}" th:text="${option}"></option>
+    </select>
+
+    <h2>Device:</h2>
+    <select>
+        <option th:each="option : ${dynamicDropdownValues}" th:value="${option}" th:text="${option}"></option>
+    </select>
+</body>
+</html>
